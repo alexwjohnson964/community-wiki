@@ -30,4 +30,15 @@ for the community
     9. test: Testing of exisiting code
     10. Breaking Change (!): If new changes breaks existing application infrastructure
 
+3. Code Stylers/Linters
+    1. Eclipse
+    2. ESLint
+
+4. Development Operations
+    1. Domain
+    2. Development VM
+
+5. Useful Tools/Technologies
+    1. Docker
+
 
