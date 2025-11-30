@@ -24,11 +24,12 @@ for the community
 2. Git Commands: This section is dedicated to outlining useful git commands that will come up in the development process
     1. [remote](./git-commands/remote.md): Manage connections between local git and remote repositories (Github)
     2. [branch](./git-commands/branch.md): Manage branches in local git
-    3. [fetch](./git-commands/fetch.md): Fetching changes from remote repositories
-    4. [pull](./git-commands/pull.md): Pulling changes from remote repositories to local repositories
-    5. [push](./git-commands/push.md): Pushing changes from local repositories to remote repositories
-    6. [rebase](./git-commands/rebase.md): Managing commit history of local repositories
-    7. [cherry-pick](./git-commands/cherry-pick.md): Adding specific pre-commited changes to local repositories
+    3. [checkout](./git-commands/checkout.md): Create/Switch between branches
+    4. [fetch](./git-commands/fetch.md): Fetching changes from remote repositories
+    5. [pull](./git-commands/pull.md): Pulling changes from remote repositories to local repositories
+    6. [push](./git-commands/push.md): Pushing changes from local repositories to remote repositories
+    7. [rebase](./git-commands/rebase.md): Managing commit history of local repositories
+    8. [cherry-pick](./git-commands/cherry-pick.md): Adding specific pre-commited changes to local repositories
 
 3. Git Commit Guidelines: This section goes over the community's git commiting guidelines. The community follows the Conventional Commits guidelines found here: https://www.conventionalcommits.org/en/v1.0.0/
     1. [feat](./git-commits/feat.md): Implemented a new feature
