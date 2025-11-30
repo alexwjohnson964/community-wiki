@@ -55,4 +55,5 @@ for the community
 6. Useful Tools/Technologies: This section covers useful tools and technologies that the community can learn/use during the development of projects
     1. [Docker](./tools/docker.md): Overview of docker which allows for the containerization of applications to improve sharability and distribution
 
+7. Interview Prep: This section covers different algorithms and tools available for members to use for interview prep
 
