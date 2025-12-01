@@ -36,6 +36,7 @@ for the community
     12. [stash](./git-commands/stash.md): Save un-pushed changes and remove them from current local branch to be moved to another branch
 
 3. Git Commit Guidelines: This section goes over the community's git commiting guidelines. The community follows the Conventional Commits guidelines found here: https://www.conventionalcommits.org/en/v1.0.0/
+    1. [Good Commits](./git-commits/good-commits.md): Guidelines for how to write good commit messages
     1. [feat](./git-commits/feat.md): Implemented a new feature
     2. [fix](./git-commits/fix.md): Fixed an existing feature
     3. [perf](./git-commits/perf.md): Changes to the code that aim to improve the performance
