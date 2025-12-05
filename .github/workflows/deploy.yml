@@ -1,0 +1,52 @@
+name: CI/CD to VM
+
+on:
+  push:
+    branches:
+      - main # Trigger on pushes to the 'main' branch
+
+jobs:
+  build_and_deploy:
+    if: github.repository == 'Code-after-Coffee/community-wiki' # Trigger only on the upstream repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (or other build environment)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build application
+        run: npm run build
+
+      - name: Archive build output
+        run: tar -czvf html.tar.gz html
+
+      - name: Deploy to VM via SSH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USERNAME }}
+          key: ${{ secrets.DEPLOYMENT_KEY }}
+          source: "html.tar.gz"
+          target: "~/nginx-template"
+
+      - name: Extract and setup on VM
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USERNAME }}
+          key: ${{ secrets.DEPLOYMENT_KEY }}
+          script: |
+            cd nginx-template
+            docker compose down -v
+            rm -r html
+            tar -xzvf html.tar.gz
+            rm html.tar.gz
+            docker compose up -d
