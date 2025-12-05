@@ -26,19 +26,22 @@ All projects in the community should have a main branch ruleset that ensures the
 
 The following are the bare minimum rules that should be set on this ruleset:
 - The target branch should point to the `main` branch of the repository
-- `Restrict creations` should be selected to limit who can create new files in the repo
-- `Restirct updates` should be selected to limit who can update files in the repo
-- `Restrict deletions` should be selected to limit who can delete files in the repo
-- `Require linear history` should be selected to ensure that merges with conflicting commit histories can cont be completed
 - `Require pull requests before merging` to make sure that any additions to the main branch are controlled and validated properly
     - Set the required approvals to include at least 1 person which will perferably be a lead on the project
     - Allow Merge and Squash as merge methods; Rebase is optional since all PRs should have already handled any need for a rebase prior to merging
 
+<!-- - `Restrict creations` should be selected to limit who can create new files in the repo
+- `Restirct updates` should be selected to limit who can update files in the repo
+- `Restrict deletions` should be selected to limit who can delete files in the repo
+- `Require linear history` should be selected to ensure that merges with conflicting commit histories can cont be completed -->
+
 One other optional but recommended ruleset to include is `Require signed commits` as it ensures better security for commits that are to be added to the repository.
 - More information about using signed commits can be found in the [GPG Keys](./gpg-keys.md) section of the Community Wiki
 
-## Example main branch ruleset
+![Example Ruleset](../../static/img/github-guidelines-rulesets-05.png)
+
+<!-- ## Example main branch ruleset
 ![Example Ruleset](../../static/img/github-guidelines-rulesets-03.png)
 
 ## Example require pull requests before merging
-![Example require pull requests before merging](../../static/img/github-guidelines-rulesets-04.png)
+![Example require pull requests before merging](../../static/img/github-guidelines-rulesets-04.png) -->
